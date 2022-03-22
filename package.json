@@ -1,0 +1,29 @@
+{
+  "name": "mdbacid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jezzyken/mdbacid.git"
+  },
+  "author": "Jezrell Jolampong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jezzyken/mdbacid/issues"
+  },
+  "homepage": "https://github.com/jezzyken/mdbacid#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
