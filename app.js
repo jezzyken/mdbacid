@@ -7,6 +7,13 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+const walletRoutes = require("./routes/wallets");
+const transactionRoutes = require( './routes/transactions');
+
+app.use("/api/wallets", walletRoutes);
+app.use('/api/transactions', transactionRoutes);
+
+
 mongoose
   .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
@@ -19,7 +26,7 @@ mongoose
     console.log("Unable to connect to MongoDB");
   });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
